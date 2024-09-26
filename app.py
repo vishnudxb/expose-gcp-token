@@ -4,9 +4,10 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Exposing GCP Token"
+def expose_token():
+    return "This is where the GCP token would be exposed"
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8080))  # Get port from environment
+    port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port)
+
