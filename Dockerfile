@@ -1,14 +1,14 @@
 FROM python:3.9-slim
 
-# Install dependencies
-RUN pip install Flask
+# Install Flask and requests
+RUN pip install Flask requests
 
-# Copy your app code
+# Copy the Python application
 COPY app.py /app/app.py
 WORKDIR /app
 
 # Expose port 8080
 EXPOSE 8080
 
-# Run your app
-CMD ["python3", "app.py"]
+# Run the application
+CMD ["python", "app.py"]
